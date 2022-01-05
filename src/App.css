@@ -215,9 +215,9 @@
 
 .wrapper {
   height: 100vh;
-    width: 100%;
-  background: rgb(117,84,160);
-  background: linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);  
+  width: 100%;
+  background: rgb(84,0,128);
+  background: linear-gradient(90deg, rgba(84,0,128,0.9023984593837535) 0%, rgba(54,63,252,0.8995973389355743) 5%, rgba(0,209,139,1) 10%, rgba(0,116,82,1) 30%, rgba(0,116,82,1) 50%, rgba(0,116,82,1) 70%, rgba(0,209,139,1) 90%);
   display: flex;
   justify-content: center;
   align-items: center;
