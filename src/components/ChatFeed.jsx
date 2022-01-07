@@ -16,7 +16,7 @@ const ChatFeed = (props) => {
       setLastMessage(text);
       speak({text, voice: voices[14]});
     }
-  }, [messages]);
+  }, [lastMessage, messages, speak, voices]);
 
   const chat = chats && chats[activeChat];
 
