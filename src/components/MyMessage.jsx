@@ -1,12 +1,14 @@
+import Magnifier from "react-magnifier";
+
 const MyMessage = ({ message }) => {
   if(message?.attachments?.length > 0) {
     return (
-      <img 
-        src={message.attachments[0].file}
-        alt="message-attachment"
-        className="message-image"
-        style={{ float: 'right' }}
-      />
+      <div style={{ float: 'right' }}>
+        <Magnifier
+          src={message.attachments[0].file}
+          width={400}
+        />
+      </div>
     )
   }
   return (

@@ -11,6 +11,7 @@
     "react": "^17.0.2",
     "react-chat-engine": "^1.11.22",
     "react-dom": "^17.0.2",
+    "react-magnifier": "^3.0.4",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-speech-kit": "^3.0.1"
   }
 }

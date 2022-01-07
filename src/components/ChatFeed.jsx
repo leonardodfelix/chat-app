@@ -1,10 +1,22 @@
+import { useEffect, useState } from 'react';
 import MessageForm from './MessageForm';
 import MyMessage from './MyMessage';
-import TheirMessage from './TheirMessage';
-
+  import TheirMessage from './TheirMessage';
+  import { useSpeechSynthesis } from 'react-speech-kit';
 
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages } = props;
+  const { speak, voices } = useSpeechSynthesis();
+  const [lastMessage, setLastMessage] = useState('sem mensagens');
+  
+  useEffect(() => {
+    const entries = Object.keys(messages).length === 0 ? [['',{text:'sem mensagens'}]] : Object.entries(messages);
+    const { text } = entries[entries.length - 1][1];
+    if (text !== lastMessage) {
+      setLastMessage(text);
+      speak({text, voice: voices[14]});
+    }
+  }, [messages]);
 
   const chat = chats && chats[activeChat];
 
